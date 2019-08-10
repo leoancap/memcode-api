@@ -1,0 +1,12 @@
+{
+  "defaultSeverity": "warning",
+  "linterOptions": {
+    "exclude": ["node_modules", "graphql"]
+  },
+  "rules": {
+    "semicolon": false,
+    "no-console": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false
+  }
+}
