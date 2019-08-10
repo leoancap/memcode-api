@@ -39,6 +39,7 @@ const main = () => __awaiter(this, void 0, void 0, function* () {
     const schema = yield createSchema_1.createSchema();
     const apolloServer = new apollo_server_express_1.ApolloServer({
         schema,
+        playground: true,
         context: ({ req, res }) => ({
             req,
             res,
