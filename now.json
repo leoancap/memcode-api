@@ -2,11 +2,18 @@
   "version": 2,
   "name": "memcode-api",
   "alias": "memcode-api.now.sh",
-  "builds": [{ "src": "graphql/index.js", "use": "@now/node-server" }],
+  "builds": [
+    { "src": "graphql/index.js", "use": "@now/node-server" },
+    { "src": "python/index.js", "use": "@now/node" }
+  ],
   "routes": [
     {
       "src": "/graphql",
       "dest": "graphql/index.js"
+    },
+    {
+      "src": "/python",
+      "dest": "python/index.js"
     }
   ],
   "build": {
