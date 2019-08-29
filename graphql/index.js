@@ -65,13 +65,13 @@ const main = () => __awaiter(this, void 0, void 0, function* () {
         resave: false,
         saveUninitialized: false,
         cookie: {
-            httpOnly: false,
+            httpOnly: true,
             maxAge: 1000 * 60 * 60 * 24 * 7 * 365,
         },
     }));
     apolloServer.applyMiddleware({ app, cors: false });
     app.listen(4000, () => {
-        console.log("Listening on this  http://localhost:4000/be");
+        console.log("Listening on this  http://localhost:4000/graphql");
     });
 });
 main();

@@ -57,7 +57,7 @@ const main = async () => {
       resave: false,
       saveUninitialized: false,
       cookie: {
-        httpOnly: false,
+        httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24 * 7 * 365, // 7 years
       },
     }),
@@ -65,7 +65,7 @@ const main = async () => {
   apolloServer.applyMiddleware({ app, cors: false });
 
   app.listen(4000, () => {
-    console.log("Listening on this  http://localhost:4000/be");
+    console.log("Listening on this  http://localhost:4000/graphql");
   });
 };
 
